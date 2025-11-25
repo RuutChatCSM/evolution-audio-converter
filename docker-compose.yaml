@@ -4,12 +4,12 @@ services:
     image: atendai/evolution-audio-converter:latest
     restart: always
     ports:
-      - {PORT-:4040}:4040
+      - ${PORT-:4040}:4040
     networks:
       - evolution-net
     environment:
       - PORT=4040
-      - API_KEY={EVO_API_KEY}
+      - API_KEY=${EVO_API_KEY}
     expose:
       - 4040
 
